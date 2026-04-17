@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { MapPin, DollarSign, Clock, Users, TrendingUp, AlertCircle } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/button';
 
 interface Job {
   id: string;

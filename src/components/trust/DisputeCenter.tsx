@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Scale, AlertCircle, CheckCircle, Clock } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/button';
 import { DisputeResolutionModal } from './DisputeResolutionModal';
 
 interface DisputeCenterProps {

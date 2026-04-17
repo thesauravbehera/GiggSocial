@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { CreditCard, Plus, Trash2, CheckCircle } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/button';
 
 export function PaymentSettings() {
   const paymentMethods = [

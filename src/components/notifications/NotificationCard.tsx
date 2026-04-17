@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Briefcase, DollarSign, MessageCircle, Bell, Star, Scale, Check, Trash2, ExternalLink } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/button';
 
 interface Notification {
   id: string;

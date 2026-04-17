@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button } from '../ui/Button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/Card';
+import { Button } from '../ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { ArrowRight, CheckCircle2, Zap, Shield, TrendingUp } from 'lucide-react';
 
 interface HomePageProps {

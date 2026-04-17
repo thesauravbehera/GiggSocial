@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Lock, Eye, EyeOff, Shield, Key } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/button';
 
 export function PrivacySettings() {
   const [privacySettings, setPrivacySettings] = useState({

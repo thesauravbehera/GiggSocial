@@ -1,9 +1,9 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/Card';
-import { Badge } from '../ui/Badge';
-import { Progress } from '../ui/Progress';
-import { Avatar, AvatarFallback } from '../ui/Avatar';
-import { Button } from '../ui/Button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { Badge } from '../ui/badge';
+import { Progress } from '../ui/progress';
+import { Avatar, AvatarFallback } from '../ui/avatar';
+import { Button } from '../ui/button';
 import { MapPin, Calendar, Star, TrendingUp, Award, CheckCircle2, Clock, Briefcase } from 'lucide-react';
 import { skillCategories } from '../../data/skills';
 

@@ -5,7 +5,7 @@ import { JobDetailsModal } from './JobDetailsModal';
 import { ActiveJobsCard } from './ActiveJobsCard';
 import { PostJobModal } from './PostJobModal';
 import { Briefcase, Plus, Filter, Search } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/button';
 
 interface Job {
   id: string;

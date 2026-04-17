@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Globe, Moon, Sun, Volume2 } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/button';
 
 export function PreferencesSettings() {
   const [preferences, setPreferences] = useState({

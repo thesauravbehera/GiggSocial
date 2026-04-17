@@ -5,7 +5,7 @@ import { EarningsChart } from './EarningsChart';
 import { PaymentHistory } from './PaymentHistory';
 import { PerformanceMetrics } from './PerformanceMetrics';
 import { TrendingUp, DollarSign, Calendar, Download } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/button';
 
 interface AnalyticsDashboardProps {
   userRole: 'worker' | 'employer';

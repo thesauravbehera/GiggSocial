@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Bell, Mail, MessageCircle, Briefcase, DollarSign } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/button';
 
 export function NotificationSettings() {
   const [settings, setSettings] = useState({

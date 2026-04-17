@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button } from './ui/Button';
-import { Avatar, AvatarFallback } from './ui/Avatar';
+import { Button } from './ui/button';
+import { Avatar, AvatarFallback } from './ui/avatar';
 import { Menu } from 'lucide-react';
 
 interface NavigationProps {

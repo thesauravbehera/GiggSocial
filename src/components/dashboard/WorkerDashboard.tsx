@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Briefcase, TrendingUp, Shield, DollarSign, Star, ArrowRight, Zap, CheckCircle } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/button';
 
 interface WorkerDashboardProps {
   userData: any;

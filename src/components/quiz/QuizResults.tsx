@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button } from '../ui/Button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/Card';
-import { Badge } from '../ui/Badge';
+import { Button } from '../ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { Badge } from '../ui/badge';
 import { ArrowRight, RotateCcw, Trophy, Award, CheckCircle2 } from 'lucide-react';
 
 interface QuizResultsProps {

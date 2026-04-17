@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Bell, X, Check, Trash2, Settings, Filter } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/button';
 import { NotificationCard } from './NotificationCard';
 import { NotificationFilters } from './NotificationFilters';
 

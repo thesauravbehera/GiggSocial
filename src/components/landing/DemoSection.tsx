@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Play, Zap, Users, Shield, TrendingUp } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/button';
 
 export function DemoSection() {
   const [isPlaying, setIsPlaying] = React.useState(false);

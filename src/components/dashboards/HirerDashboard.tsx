@@ -17,7 +17,7 @@ import {
   Filter,
   Star
 } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/button';
 
 interface HirerDashboardProps {
   onNavigateToMarketplace: () => void;

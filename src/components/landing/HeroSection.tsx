@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/button';
 import { ArrowRight, Sparkles, Play } from 'lucide-react';
 
 interface HeroSectionProps {

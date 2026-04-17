@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { MessageCircle, Search, Plus } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/button';
 import { ConversationList } from './ConversationList';
 import { ChatWindow } from './ChatWindow';
 

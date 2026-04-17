@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Search, SlidersHorizontal, Sparkles } from 'lucide-react';
 import { ServiceCard } from './ServiceCard';
-import { Button } from '../ui/Button';
+import { Button } from '../ui/button';
 
 interface MarketplacePageProps {
   userRole: 'worker' | 'hirer';
