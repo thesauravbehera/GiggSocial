@@ -1,4 +1,4 @@
-# saurv.ai - Verification & Navigation Flow
+# Gigg Connect - Verification & Navigation Flow
 
 ## 🎯 New Approach: Aadhaar Verification + Explorable Platform
 

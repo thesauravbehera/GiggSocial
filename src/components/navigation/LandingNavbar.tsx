@@ -56,7 +56,7 @@ export function LandingNavbar({ onNavigate, onSignIn, onGetStarted }: LandingNav
               className="flex items-center gap-2 group"
             >
               <div className="text-3xl font-bold text-white group-hover:text-gray-300 transition-colors tracking-tight">
-                saurv<span className="text-white/60">.ai</span>
+                Gigg<span className="text-white/60">Connect</span>
               </div>
             </button>
 
@@ -124,7 +124,7 @@ export function LandingNavbar({ onNavigate, onSignIn, onGetStarted }: LandingNav
                 {/* Logo */}
                 <div className="mb-8">
                   <div className="text-2xl font-bold text-white mb-2 tracking-tight">
-                    saurv<span className="text-white/60">.ai</span>
+                    Gigg<span className="text-white/60">Connect</span>
                   </div>
                   <div className="text-sm text-gray-400">Work Without Boundaries</div>
                 </div>

@@ -46,7 +46,7 @@ export function DemoSection() {
             See It In Action
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Watch how saurv.ai connects gig workers with opportunities in real-time
+            Watch how Gigg Connect connects gig workers with opportunities in real-time
           </p>
         </motion.div>
 

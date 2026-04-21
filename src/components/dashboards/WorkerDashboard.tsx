@@ -107,7 +107,7 @@ export function WorkerDashboard({
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="text-2xl font-bold tracking-tight">
-              saurv<span className="text-white/60">.ai</span>
+              Gigg<span className="text-white/60">Connect</span>
             </div>
 
             {/* Nav Items */}

@@ -35,7 +35,7 @@ export function SignInPage({ onSignIn, onBack, onSignUp }: SignInPageProps) {
             Welcome Back
           </h1>
           <p className="text-xl text-gray-400">
-            Sign in to your saurv.ai account
+            Sign in to your Gigg Connect account
           </p>
         </motion.div>
 

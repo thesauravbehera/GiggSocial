@@ -1,7 +1,7 @@
-## saurv.ai - AI-Powered Workforce Platform
+## Gigg Connect - AI-Powered Workforce Platform
 
 ### Brand Identity
-- **Name:** saurv.ai
+- **Name:** Gigg Connect
 - **Tagline:** AI-Powered Workforce
 - **Mission:** Connecting verified workers with opportunities through intelligent AI matching
 
@@ -14,7 +14,7 @@
 - ₹20,000 Cr Market
 
 ### Contact
-- **Email:** hello@saurv.ai
+- **Email:** hello@giggconnect.com
 - **Phone:** +91 98765 43210
 - **Location:** Mumbai, Maharashtra, India
 
@@ -28,7 +28,7 @@
 ## Branding Changes Applied
 
 ### 1. Logo & Name
-- Changed from "KaamForce" to "saurv.ai"
+- Changed from "KaamForce" to "Gigg Connect"
 - Styling: "saurv" in white, ".ai" in white/60
 - Tracking: tight
 
@@ -49,8 +49,8 @@
 - 4.9★ Rating
 
 ### 5. Contact Info
-- hello@saurv.ai
-- saurv.ai domain references
+- hello@giggconnect.com
+- Gigg Connect domain references
 
 ---
 

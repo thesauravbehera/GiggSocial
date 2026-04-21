@@ -1,11 +1,11 @@
 # Product Requirements Document (PRD)
-## saurv.ai - AI-Powered Gig Marketplace Platform
+## Gigg Connect - AI-Powered Gig Marketplace Platform
 
 ---
 
 ## 📋 Document Information
 
-- **Product Name:** saurv.ai
+- **Product Name:** Gigg Connect
 - **Tagline:** Work Without Boundaries
 - **Version:** 1.0
 - **Last Updated:** January 25, 2026
@@ -16,7 +16,7 @@
 
 ## 🎯 Executive Summary
 
-**saurv.ai** is an AI-powered gig marketplace platform designed specifically for India's gig economy. The platform combines advanced AI-driven workforce verification with a Fiverr-style service marketplace, creating a trusted ecosystem where gig workers can offer services and hirers can find reliable talent for low-wage gig work.
+**Gigg Connect** is an AI-powered gig marketplace platform designed specifically for India's gig economy. The platform combines advanced AI-driven workforce verification with a Fiverr-style service marketplace, creating a trusted ecosystem where gig workers can offer services and hirers can find reliable talent for low-wage gig work.
 
 The platform leverages 6 autonomous AI agents to verify worker skills, match workers to jobs, suggest dynamic pricing, calculate real-time trust scores, and resolve disputes, creating a seamless, trustworthy marketplace experience.
 
@@ -66,7 +66,7 @@ The platform leverages 6 autonomous AI agents to verify worker skills, match wor
 
 ## 💡 Solution Overview
 
-**saurv.ai** solves these challenges through:
+**Gigg Connect** solves these challenges through:
 
 ### 1. **AI-Powered Verification System**
 - Aadhaar-based identity verification
@@ -209,7 +209,7 @@ Design:
 
 ### Brand Identity
 
-- **Name:** saurv.ai
+- **Name:** Gigg Connect
 - **Tagline:** Work Without Boundaries
 - **Voice:** Professional, Trustworthy, Empowering
 - **Tone:** Confident, Clear, Accessible
@@ -1610,7 +1610,7 @@ Hirer Plans:
 
 **Channels:**
 - In-app chat (24/7)
-- Email: support@saurv.ai
+- Email: support@giggconnect.com
 - Phone: 1800-XXX-XXXX (9 AM - 9 PM)
 - Social media
 
@@ -1623,15 +1623,15 @@ Hirer Plans:
 ### Community
 
 **Forums:**
-- saurv.ai/community
+- Gigg Connect/community
 - Discord server
 - WhatsApp groups (regional)
 
 **Social Media:**
-- Twitter: @saurvai
-- Instagram: @saurv.ai
-- LinkedIn: saurv-ai
-- YouTube: saurv.ai
+- Twitter: @giggconnect
+- Instagram: @giggconnect
+- LinkedIn: gigg-connect
+- YouTube: Gigg Connect
 
 ---
 
@@ -1679,7 +1679,7 @@ Hirer Plans:
 
 ## 🎉 Conclusion
 
-**saurv.ai** represents a revolutionary approach to India's gig economy by combining AI-powered verification, intelligent matching, and a trustworthy marketplace. By eliminating trust barriers and automating complex processes with AI agents, we create boundless opportunities for millions of gig workers while providing hirers with confidence and efficiency.
+**Gigg Connect** represents a revolutionary approach to India's gig economy by combining AI-powered verification, intelligent matching, and a trustworthy marketplace. By eliminating trust barriers and automating complex processes with AI agents, we create boundless opportunities for millions of gig workers while providing hirers with confidence and efficiency.
 
 **Work Without Boundaries.** 🚀
 
@@ -1696,7 +1696,7 @@ Hirer Plans:
 ## 📧 Contact
 
 For questions about this PRD:
-- **Email:** product@saurv.ai
+- **Email:** product@giggconnect
 - **Slack:** #product-team
 - **Confluence:** [PRD Link]
 

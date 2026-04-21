@@ -9,7 +9,7 @@ export function TestimonialsSection() {
       role: 'Electrician, Mumbai',
       avatar: 'R',
       rating: 5,
-      text: 'saurv.ai changed my life. The AI matching finds me the perfect jobs, and I\'ve doubled my income in just 3 months. The trust score really helps me stand out.',
+      text: 'Gigg Connect changed my life. The AI matching finds me the perfect jobs, and I\'ve doubled my income in just 3 months. The trust score really helps me stand out.',
       stats: { jobs: 127, earnings: '₹8.5L' },
     },
     {
@@ -17,7 +17,7 @@ export function TestimonialsSection() {
       role: 'Construction Manager',
       avatar: 'P',
       rating: 5,
-      text: 'Finally, a platform that actually verifies workers! We hired 15 people through saurv.ai and every single one was skilled and reliable. The AI matching is incredible.',
+      text: 'Finally, a platform that actually verifies workers! We hired 15 people through Gigg Connect and every single one was skilled and reliable. The AI matching is incredible.',
       stats: { hires: 15, saved: '40hrs' },
     },
     {
@@ -33,7 +33,7 @@ export function TestimonialsSection() {
       role: 'Facility Manager',
       avatar: 'S',
       rating: 5,
-      text: 'We post 20+ jobs monthly. saurv.ai saves us hours of screening. The trust scores and AI recommendations are spot-on. Our hiring time went from weeks to days.',
+      text: 'We post 20+ jobs monthly. Gigg Connect saves us hours of screening. The trust scores and AI recommendations are spot-on. Our hiring time went from weeks to days.',
       stats: { hires: 50, saved: '120hrs' },
     },
     {
@@ -49,7 +49,7 @@ export function TestimonialsSection() {
       role: 'HR Director',
       avatar: 'A',
       rating: 5,
-      text: 'saurv.ai is our go-to for all gig hiring. The verification process ensures quality, and the dispute resolution AI saved us multiple times. Highly recommend!',
+      text: 'Gigg Connect is our go-to for all gig hiring. The verification process ensures quality, and the dispute resolution AI saved us multiple times. Highly recommend!',
       stats: { hires: 78, saved: '200hrs' },
     },
   ];
@@ -71,7 +71,7 @@ export function TestimonialsSection() {
             Loved by Thousands
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Real stories from workers and employers who transformed their workflow with saurv.ai
+            Real stories from workers and employers who transformed their workflow with Gigg Connect
           </p>
         </motion.div>
 

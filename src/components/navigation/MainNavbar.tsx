@@ -72,7 +72,7 @@ export function MainNavbar({
             className="flex items-center gap-2 group"
           >
             <div className="text-2xl font-bold text-white group-hover:text-gray-300 transition-colors tracking-tight">
-              saurv<span className="text-white/60">.ai</span>
+              Gigg<span className="text-white/60">Connect</span>
             </div>
           </button>
 

@@ -1,4 +1,4 @@
-# saurv.ai - Brand Identity
+# Gigg Connect - Brand Identity
 
 ## 🎯 Core Tagline
 **"Work Without Boundaries."**
@@ -131,10 +131,10 @@
 "AI-powered talent marketplace for the gig economy."
 
 ### Elevator Pitch (30 seconds)
-"saurv.ai removes boundaries between talent and opportunity. Workers get AI-verified in 5 minutes, hirers get instant access to trusted professionals. Smart matching, fair pricing, zero friction."
+"Gigg Connect removes boundaries between talent and opportunity. Workers get AI-verified in 5 minutes, hirers get instant access to trusted professionals. Smart matching, fair pricing, zero friction."
 
 ### Full Description (1 minute)
-"saurv.ai is India's first AI-powered talent marketplace designed for the gig economy. We verify workers through AI-powered quizzes and video analysis in just 5 minutes, building trust that traditional credentials can't match. Our intelligent matching system analyzes 9 factors to connect the right talent with the right opportunity, while AI-recommended pricing ensures fairness for everyone. Whether you're a worker building your future or a hirer scaling your team, saurv.ai empowers you to work without boundaries."
+"Gigg Connect is India's first AI-powered talent marketplace designed for the gig economy. We verify workers through AI-powered quizzes and video analysis in just 5 minutes, building trust that traditional credentials can't match. Our intelligent matching system analyzes 9 factors to connect the right talent with the right opportunity, while AI-recommended pricing ensures fairness for everyone. Whether you're a worker building your future or a hirer scaling your team, Gigg Connect empowers you to work without boundaries."
 
 ---
 
@@ -217,7 +217,7 @@
 
 ### Brand Awareness
 - "Work Without Boundaries" brand recall
-- saurv.ai domain traffic
+- Gigg Connect domain traffic
 - Social media mentions
 
 ### Brand Perception
@@ -259,6 +259,6 @@
 
 ---
 
-**Brand Identity Owner:** saurv.ai Team
+**Brand Identity Owner:** Gigg Connect Team
 **Last Updated:** January 2026
 **Next Review:** April 2026

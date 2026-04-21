@@ -1,17 +1,17 @@
-# saurv.ai - Complete Web Flow Plan
+# Gigg Connect - Complete Web Flow Plan
 
 ## 🎯 Navigation Structure
 
 ### **Landing Navbar** (Public/Unauthenticated)
 ```
 ┌────────────────────────────────────────────────┐
-│ saurv.ai    Home  Features  Demo  Pricing     │
+│ Gigg Connect    Home  Features  Demo  Pricing     │
 │                                      [Sign In] │
 └────────────────────────────────────────────────┘
 ```
 
 **Elements:**
-- Logo: `saurv.ai` (left)
+- Logo: `Gigg Connect` (left)
 - Nav Items: Home, Features, Demo, Pricing (center)
 - Sign In button (right, outline style)
 
@@ -25,7 +25,7 @@
 ### **Main Navbar** (Authenticated)
 ```
 ┌────────────────────────────────────────────────┐
-│ saurv.ai  Dashboard  Browse  Services  More▼  │
+│ Gigg Connect  Dashboard  Browse  Services  More▼  │
 │                              💬3  🔔5  👤 R ▼  │
 └────────────────────────────────────────────────┘
 ```

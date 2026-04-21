@@ -51,7 +51,7 @@ export function FooterSection() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <div className="text-3xl font-bold text-white mb-4 tracking-tight">
-              saurv<span className="text-white/60">.ai</span>
+              Gigg<span className="text-white/60">Connect</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
               AI-powered marketplace where skills meet opportunity. Work without boundaries. Build without limits.
@@ -69,7 +69,7 @@ export function FooterSection() {
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-400">
                 <Mail className="w-4 h-4" />
-                <span>hello@saurv.ai</span>
+                <span>hello@giggconnect.com</span>
               </div>
             </div>
 
@@ -112,7 +112,7 @@ export function FooterSection() {
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-400 text-sm">
-              © 2026 saurv.ai. All rights reserved.
+              © 2026 Gigg Connect. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
