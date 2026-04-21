@@ -12,12 +12,32 @@ import { ProfilePage } from './components/pages/ProfilePage';
 import { SettingsPage } from './components/settings/SettingsPage';
 import { AIMatchmakerPage } from './components/pages/AIMatchmakerPage';
 import { ContractManagerPage } from './components/pages/ContractManagerPage';
+import { NotificationsCenter } from './components/notifications/NotificationsCenter';
 
-type Page = 'landing' | 'signup' | 'signin' | 'quiz' | 'verification' | 'worker-dashboard' | 'hirer-dashboard' | 'marketplace' | 'messaging' | 'profile' | 'settings' | 'ai-matchmaker' | 'escrow-contract';
+type Page = 'landing' | 'signup' | 'signin' | 'quiz' | 'verification' | 'worker-dashboard' | 'hirer-dashboard' | 'marketplace' | 'messaging' | 'profile' | 'settings' | 'ai-matchmaker' | 'escrow-contract' | 'notifications';
 type UserRole = 'worker' | 'hirer' | null;
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<Page>('landing');
+  const [currentPage, setCurrentPage] = useState<Page>(() => {
+    const path = window.location.pathname.slice(1);
+    const validPages: Page[] = ['landing', 'signup', 'signin', 'quiz', 'verification', 'worker-dashboard', 'hirer-dashboard', 'marketplace', 'messaging', 'profile', 'settings', 'ai-matchmaker', 'escrow-contract', 'notifications'];
+    return validPages.includes(path as Page) ? (path as Page) : 'landing';
+  });
+
+  React.useEffect(() => {
+    const handlePopState = () => {
+      const path = window.location.pathname.slice(1);
+      const validPages: Page[] = ['landing', 'signup', 'signin', 'quiz', 'verification', 'worker-dashboard', 'hirer-dashboard', 'marketplace', 'messaging', 'profile', 'settings', 'ai-matchmaker', 'escrow-contract', 'notifications'];
+      setCurrentPage(validPages.includes(path as Page) ? (path as Page) : 'landing');
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  const navigateTo = (page: Page) => {
+    setCurrentPage(page);
+    window.history.pushState(null, '', `/${page === 'landing' ? '' : page}`);
+  };
   const [userRole, setUserRole] = useState<UserRole>(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isVerified, setIsVerified] = useState(false);
@@ -29,14 +49,14 @@ function App() {
     // Workers can choose to verify or skip
     // Hirers go straight to dashboard
     if (role === 'worker') {
-      setCurrentPage('verification');
+      navigateTo('verification');
     } else {
-      setCurrentPage('hirer-dashboard');
+      navigateTo('hirer-dashboard');
     }
   };
 
   const handleSignIn = () => {
-    setCurrentPage('signin');
+    navigateTo('signin');
   };
 
   const handleSignInSuccess = (role: 'worker' | 'hirer') => {
@@ -45,63 +65,63 @@ function App() {
     setIsVerified(true); // Assume returning users are verified
     
     if (role === 'worker') {
-      setCurrentPage('worker-dashboard');
+      navigateTo('worker-dashboard');
     } else {
-      setCurrentPage('hirer-dashboard');
+      navigateTo('hirer-dashboard');
     }
   };
 
   const handleVerificationComplete = () => {
     setIsVerified(true);
-    setCurrentPage('worker-dashboard');
+    navigateTo('worker-dashboard');
   };
 
   const handleVerificationSkip = () => {
     // Allow user to explore dashboard without verification
-    setCurrentPage('worker-dashboard');
+    navigateTo('worker-dashboard');
   };
 
   const handleNavigateToDashboard = () => {
     if (userRole === 'worker') {
-      setCurrentPage('worker-dashboard');
+      navigateTo('worker-dashboard');
     } else if (userRole === 'hirer') {
-      setCurrentPage('hirer-dashboard');
+      navigateTo('hirer-dashboard');
     }
   };
 
   const handleNavigateToMarketplace = () => {
-    setCurrentPage('marketplace');
+    navigateTo('marketplace');
   };
 
   const handleNavigateToVerification = () => {
-    setCurrentPage('verification');
+    navigateTo('verification');
   };
 
   const handleNavigateToMessaging = () => {
-    setCurrentPage('messaging');
+    navigateTo('messaging');
   };
 
   const handleNavigateToProfile = () => {
-    setCurrentPage('profile');
+    navigateTo('profile');
   };
 
   const handleNavigateToSettings = () => {
-    setCurrentPage('settings');
+    navigateTo('settings');
   };
 
   const handleNavigateToAIMatchmaker = () => {
-    setCurrentPage('ai-matchmaker');
+    navigateTo('ai-matchmaker');
   };
 
   const handleNavigateToEscrow = () => {
-    setCurrentPage('escrow-contract');
+    navigateTo('escrow-contract');
   };
 
   return (
     <div className="min-h-screen bg-black">
       {currentPage === 'landing' && (
         <LandingPage 
-          onGetStarted={() => setCurrentPage('signup')}
+          onGetStarted={() => navigateTo('signup')}
           onSignIn={handleSignIn}
         />
       )}
@@ -109,7 +129,7 @@ function App() {
       {currentPage === 'signup' && (
         <SignUpPage 
           onSignUp={handleSignUp}
-          onBack={() => setCurrentPage('landing')}
+          onBack={() => navigateTo('landing')}
           onSignIn={handleSignIn}
         />
       )}
@@ -117,8 +137,8 @@ function App() {
       {currentPage === 'signin' && (
         <SignInPage 
           onSignIn={handleSignInSuccess}
-          onBack={() => setCurrentPage('landing')}
-          onSignUp={() => setCurrentPage('signup')}
+          onBack={() => navigateTo('landing')}
+          onSignUp={() => navigateTo('signup')}
         />
       )}
 
@@ -130,7 +150,7 @@ function App() {
       )}
 
       {currentPage === 'quiz' && (
-        <QuizPage onComplete={() => setCurrentPage('worker-dashboard')} />
+        <QuizPage onComplete={() => navigateTo('worker-dashboard')} />
       )}
 
       {currentPage === 'worker-dashboard' && (
@@ -166,11 +186,27 @@ function App() {
       )}
 
       {currentPage === 'profile' && (
-        <ProfilePage onBack={handleNavigateToDashboard} userData={undefined} />
+        <ProfilePage 
+          onBack={handleNavigateToDashboard} 
+          userData={{
+            name: "John Doe",
+            city: "Mumbai, India",
+            experience: "5 years",
+            verificationStatus: { badge: "expert", score: 85 },
+            skills: []
+          }} 
+        />
       )}
 
       {currentPage === 'settings' && (
-        <SettingsPage onBack={handleNavigateToDashboard} userData={undefined} />
+        <SettingsPage 
+          onBack={handleNavigateToDashboard} 
+          userData={{
+            name: "John Doe",
+            email: "john@example.com",
+            phone: "+91 98765 43210"
+          }} 
+        />
       )}
 
       {currentPage === 'ai-matchmaker' && (
@@ -179,6 +215,10 @@ function App() {
 
       {currentPage === 'escrow-contract' && (
         <ContractManagerPage onBack={handleNavigateToDashboard} />
+      )}
+
+      {currentPage === 'notifications' && (
+        <NotificationsCenter />
       )}
     </div>
   );

@@ -150,9 +150,9 @@ export function MainNavbar({
           <div className="flex items-center gap-2">
             {/* Messages */}
             <button
-              onClick={() => onNavigate('messages')}
+              onClick={() => onNavigate('messaging')}
               className={`relative p-2 rounded-lg transition-all ${
-                currentPage === 'messages'
+                currentPage === 'messaging'
                   ? 'bg-white/10 text-white'
                   : 'text-gray-400 hover:text-white hover:bg-white/5'
               }`}
