@@ -4,14 +4,15 @@ import { Badge } from '../ui/badge';
 import { Progress } from '../ui/progress';
 import { Avatar, AvatarFallback } from '../ui/avatar';
 import { Button } from '../ui/button';
-import { MapPin, Calendar, Star, TrendingUp, Award, CheckCircle2, Clock, Briefcase } from 'lucide-react';
+import { MapPin, Calendar, Star, TrendingUp, Award, CheckCircle2, Clock, Briefcase, ArrowLeft } from 'lucide-react';
 import { skillCategories } from '../../data/skills';
 
 interface ProfilePageProps {
   userData: any;
+  onBack: () => void;
 }
 
-export function ProfilePage({ userData }: ProfilePageProps) {
+export function ProfilePage({ userData, onBack }: ProfilePageProps) {
   const verificationScore = userData.verificationStatus?.score || 0;
   const profileScore = 65;
   const activityScore = 30;
@@ -45,8 +46,14 @@ export function ProfilePage({ userData }: ProfilePageProps) {
   const trustLevel = getTrustLevel();
 
   return (
-    <div className="container px-4 py-16">
+    <div className="container px-4 py-8">
       <div className="mx-auto max-w-7xl">
+        <div className="mb-8 flex items-center">
+          <Button variant="ghost" size="sm" onClick={onBack} className="gap-2">
+            <ArrowLeft className="w-4 h-4" />
+            Back to Dashboard
+          </Button>
+        </div>
         {/* Profile Header */}
         <div className="mb-12">
           <div className="flex flex-col gap-8 md:flex-row md:items-start">

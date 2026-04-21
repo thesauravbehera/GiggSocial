@@ -7,8 +7,13 @@ import { HirerDashboard } from './components/dashboards/HirerDashboard';
 import { MarketplacePage } from './components/marketplace/MarketplacePage';
 import { QuizPage } from './components/quiz/QuizPage';
 import { AadhaarVerificationPage } from './components/verification/AadhaarVerificationPage';
+import { MessagingPage } from './components/pages/MessagingPage';
+import { ProfilePage } from './components/pages/ProfilePage';
+import { SettingsPage } from './components/settings/SettingsPage';
+import { AIMatchmakerPage } from './components/pages/AIMatchmakerPage';
+import { ContractManagerPage } from './components/pages/ContractManagerPage';
 
-type Page = 'landing' | 'signup' | 'signin' | 'quiz' | 'verification' | 'worker-dashboard' | 'hirer-dashboard' | 'marketplace';
+type Page = 'landing' | 'signup' | 'signin' | 'quiz' | 'verification' | 'worker-dashboard' | 'hirer-dashboard' | 'marketplace' | 'messaging' | 'profile' | 'settings' | 'ai-matchmaker' | 'escrow-contract';
 type UserRole = 'worker' | 'hirer' | null;
 
 function App() {
@@ -72,6 +77,26 @@ function App() {
     setCurrentPage('verification');
   };
 
+  const handleNavigateToMessaging = () => {
+    setCurrentPage('messaging');
+  };
+
+  const handleNavigateToProfile = () => {
+    setCurrentPage('profile');
+  };
+
+  const handleNavigateToSettings = () => {
+    setCurrentPage('settings');
+  };
+
+  const handleNavigateToAIMatchmaker = () => {
+    setCurrentPage('ai-matchmaker');
+  };
+
+  const handleNavigateToEscrow = () => {
+    setCurrentPage('escrow-contract');
+  };
+
   return (
     <div className="min-h-screen bg-black">
       {currentPage === 'landing' && (
@@ -112,6 +137,11 @@ function App() {
         <WorkerDashboard 
           onNavigateToMarketplace={handleNavigateToMarketplace}
           onNavigateToVerification={handleNavigateToVerification}
+          onNavigateToMessaging={handleNavigateToMessaging}
+          onNavigateToProfile={handleNavigateToProfile}
+          onNavigateToSettings={handleNavigateToSettings}
+          onNavigateToAIMatchmaker={handleNavigateToAIMatchmaker}
+          onNavigateToEscrow={handleNavigateToEscrow}
           isVerified={isVerified}
         />
       )}
@@ -129,6 +159,26 @@ function App() {
           isVerified={isVerified}
           onNavigateToVerification={handleNavigateToVerification}
         />
+      )}
+
+      {currentPage === 'messaging' && (
+        <MessagingPage onBack={handleNavigateToDashboard} />
+      )}
+
+      {currentPage === 'profile' && (
+        <ProfilePage onBack={handleNavigateToDashboard} userData={undefined} />
+      )}
+
+      {currentPage === 'settings' && (
+        <SettingsPage onBack={handleNavigateToDashboard} userData={undefined} />
+      )}
+
+      {currentPage === 'ai-matchmaker' && (
+        <AIMatchmakerPage onBack={handleNavigateToDashboard} />
+      )}
+
+      {currentPage === 'escrow-contract' && (
+        <ContractManagerPage onBack={handleNavigateToDashboard} />
       )}
     </div>
   );

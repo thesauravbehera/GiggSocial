@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Settings, User, Bell, Lock, CreditCard, Globe, Moon, Shield, HelpCircle, LogOut } from 'lucide-react';
+import { Settings, User, Bell, Lock, CreditCard, Globe, Moon, Shield, HelpCircle, LogOut, ArrowLeft } from 'lucide-react';
 import { AccountSettings } from './AccountSettings';
 import { NotificationSettings } from './NotificationSettings';
 import { PrivacySettings } from './PrivacySettings';
 import { PaymentSettings } from './PaymentSettings';
 import { PreferencesSettings } from './PreferencesSettings';
+import { Button } from '../ui/button';
 
 type SettingsView = 'account' | 'notifications' | 'privacy' | 'payment' | 'preferences';
 
 interface SettingsPageProps {
   userData: any;
+  onBack: () => void;
 }
 
-export function SettingsPage({ userData }: SettingsPageProps) {
+export function SettingsPage({ userData, onBack }: SettingsPageProps) {
   const [currentView, setCurrentView] = useState<SettingsView>('account');
 
   const settingsSections = [
@@ -26,7 +28,13 @@ export function SettingsPage({ userData }: SettingsPageProps) {
 
   return (
     <div className="min-h-screen bg-black">
-      <div className="container px-4 py-24">
+      <div className="container px-4 py-8">
+        <div className="mb-8 flex items-center">
+          <Button variant="ghost" size="sm" onClick={onBack} className="gap-2">
+            <ArrowLeft className="w-4 h-4" />
+            Back to Dashboard
+          </Button>
+        </div>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

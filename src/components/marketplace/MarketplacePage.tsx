@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Search, SlidersHorizontal, Sparkles } from 'lucide-react';
+import { Search, SlidersHorizontal, Sparkles, Map, List, MapPin } from 'lucide-react';
 import { ServiceCard } from './ServiceCard';
 import { Button } from '../ui/button';
+import { MapMarketplaceView } from './MapMarketplaceView';
 
 interface MarketplacePageProps {
   userRole: 'worker' | 'hirer';
@@ -14,6 +15,7 @@ interface MarketplacePageProps {
 export function MarketplacePage({ userRole, onBack, isVerified = false, onNavigateToVerification }: MarketplacePageProps) {
   const [searchQuery, setSearchQuery] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('all');
+  const [viewMode, setViewMode] = React.useState<'list' | 'map'>('list');
 
   const categories = [
     { id: 'all', label: 'All Services', count: 1240 },
@@ -28,8 +30,8 @@ export function MarketplacePage({ userRole, onBack, isVerified = false, onNaviga
   const services = [
     {
       id: '1',
-      title: 'Professional Logo Design for Your Brand',
-      description: 'I will create a modern, unique logo that captures your brand essence',
+      title: 'Professional Web Design & Development in Mumbai',
+      description: 'I will create a modern, unique website that captures your brand essence tailored for local businesses',
       image: '',
       worker: {
         name: 'Priya Sharma',
@@ -37,13 +39,13 @@ export function MarketplacePage({ userRole, onBack, isVerified = false, onNaviga
         rating: 4.9,
         reviewCount: 127,
       },
-      startingPrice: 2500,
+      startingPrice: 12500,
       category: 'Design & Creative',
     },
     {
       id: '2',
-      title: 'Full-Stack Web Application Development',
-      description: 'Build responsive, scalable web apps with React, Node.js, and databases',
+      title: 'Reliable Electronics repair in Pune',
+      description: 'Quick local appliance and electronics repairing solutions',
       image: '',
       worker: {
         name: 'Amit Patel',
@@ -51,13 +53,13 @@ export function MarketplacePage({ userRole, onBack, isVerified = false, onNaviga
         rating: 5.0,
         reviewCount: 94,
       },
-      startingPrice: 15000,
+      startingPrice: 1500,
       category: 'Development',
     },
     {
       id: '3',
-      title: 'SEO-Optimized Content Writing',
-      description: 'Engaging blog posts and articles that rank on Google',
+      title: 'Local SEO for Delhi NCR Businesses',
+      description: 'SEO-optimized writing & strategies aimed at local map packs and regional ranking',
       image: '',
       worker: {
         name: 'Rajesh Kumar',
@@ -65,13 +67,13 @@ export function MarketplacePage({ userRole, onBack, isVerified = false, onNaviga
         rating: 4.8,
         reviewCount: 203,
       },
-      startingPrice: 1500,
+      startingPrice: 3500,
       category: 'Writing & Content',
     },
     {
       id: '4',
-      title: 'Social Media Marketing Strategy',
-      description: 'Complete social media management and growth plan',
+      title: 'Home Tutor for English and Science (Bengaluru)',
+      description: 'Private 1-on-1 tutoring sessions at your home',
       image: '',
       worker: {
         name: 'Sneha Reddy',
@@ -80,12 +82,12 @@ export function MarketplacePage({ userRole, onBack, isVerified = false, onNaviga
         reviewCount: 156,
       },
       startingPrice: 8000,
-      category: 'Marketing',
+      category: 'Education',
     },
     {
       id: '5',
-      title: 'Professional Video Editing',
-      description: 'High-quality video editing for YouTube, ads, and social media',
+      title: 'Expert Wedding Photography & Video Editing (Chandigarh)',
+      description: 'High-quality photography coverage and video editing for your events',
       image: '',
       worker: {
         name: 'Vijay Singh',
@@ -93,13 +95,13 @@ export function MarketplacePage({ userRole, onBack, isVerified = false, onNaviga
         rating: 5.0,
         reviewCount: 88,
       },
-      startingPrice: 5000,
+      startingPrice: 25000,
       category: 'Video & Animation',
     },
     {
       id: '6',
-      title: 'Business Plan & Financial Modeling',
-      description: 'Comprehensive business plans with financial projections',
+      title: 'Business Plan & Registration assistance in Chennai',
+      description: 'Complete assistance with GST, documentation and business planning',
       image: '',
       worker: {
         name: 'Anita Desai',
@@ -111,6 +113,12 @@ export function MarketplacePage({ userRole, onBack, isVerified = false, onNaviga
       category: 'Business',
     },
   ];
+
+  if (viewMode === 'map') {
+    return (
+      <MapMarketplaceView services={services} onBack={onBack} />
+    );
+  }
 
   return (
     <div className="min-h-screen bg-black">
@@ -152,6 +160,20 @@ export function MarketplacePage({ userRole, onBack, isVerified = false, onNaviga
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-gray-500 focus:border-white/30 focus:outline-none transition-all"
               />
+            </div>
+            <div className="flex gap-2 bg-white/5 p-1 rounded-2xl border border-white/10">
+              <button 
+                onClick={() => setViewMode('list')}
+                className={`px-4 py-2 rounded-xl flex items-center gap-2 text-sm transition-all ${viewMode === 'list' ? 'bg-white text-black font-semibold' : 'text-gray-400 hover:text-white'}`}
+              >
+                <List className="w-4 h-4" /> List
+              </button>
+              <button 
+                onClick={() => setViewMode('map')}
+                className={`px-4 py-2 rounded-xl flex items-center gap-2 text-sm transition-all ${viewMode === 'map' ? 'bg-white text-black font-semibold' : 'text-gray-400 hover:text-white'}`}
+              >
+                <MapPin className="w-4 h-4" /> Map
+              </button>
             </div>
             <Button variant="outline" className="gap-2 px-6">
               <SlidersHorizontal className="w-5 h-5" />

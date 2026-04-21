@@ -24,12 +24,22 @@ import { Button } from '../ui/button';
 interface WorkerDashboardProps {
   onNavigateToMarketplace: () => void;
   onNavigateToVerification?: () => void;
+  onNavigateToMessaging?: () => void;
+  onNavigateToProfile?: () => void;
+  onNavigateToSettings?: () => void;
+  onNavigateToAIMatchmaker?: () => void;
+  onNavigateToEscrow?: () => void;
   isVerified?: boolean;
 }
 
 export function WorkerDashboard({ 
   onNavigateToMarketplace, 
   onNavigateToVerification, 
+  onNavigateToMessaging,
+  onNavigateToProfile,
+  onNavigateToSettings,
+  onNavigateToAIMatchmaker,
+  onNavigateToEscrow,
   isVerified = false 
 }: WorkerDashboardProps) {
   const [showVerificationBanner, setShowVerificationBanner] = useState(!isVerified);
@@ -43,25 +53,25 @@ export function WorkerDashboard({
 
   const recentGigs = [
     {
-      title: 'Logo Design for Startup',
-      client: 'TechCo',
-      price: '₹5,000',
+      title: 'Plumbing Repair (Leakage Fix) in Mumbai',
+      client: 'Raj Builders',
+      price: '₹1,500',
       deadline: '2 days left',
       status: 'In Progress',
       progress: 60,
     },
     {
-      title: 'Website Development',
-      client: 'ShopEasy',
-      price: '₹25,000',
+      title: 'Local Electronics Fix in Pune',
+      client: 'Kiran G',
+      price: '₹2,000',
       deadline: '5 days left',
       status: 'In Progress',
       progress: 30,
     },
     {
-      title: 'Mobile App UI Design',
-      client: 'FitLife',
-      price: '₹15,000',
+      title: 'Website Development for Bakery',
+      client: 'ShopEasy',
+      price: '₹25,000',
       deadline: 'Tomorrow',
       status: 'Review',
       progress: 90,
@@ -70,14 +80,14 @@ export function WorkerDashboard({
 
   const recommendedGigs = [
     {
-      title: 'E-commerce Website Design',
-      category: 'Web Design',
+      title: 'Wedding Photographer in Delhi NCR',
+      category: 'Photography',
       budget: '₹30,000 - ₹50,000',
       matchScore: 95,
     },
     {
-      title: 'Brand Identity Package',
-      category: 'Design',
+      title: 'Home Tutor for Mathematics (Bengaluru)',
+      category: 'Tutoring',
       budget: '₹20,000 - ₹35,000',
       matchScore: 88,
     },
@@ -118,19 +128,19 @@ export function WorkerDashboard({
 
             {/* Right Section */}
             <div className="flex items-center gap-3">
-              <Button variant="ghost" size="icon" className="relative">
+              <Button variant="ghost" size="icon" className="relative" onClick={onNavigateToMessaging}>
                 <MessageSquare className="w-5 h-5" />
                 <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full text-xs flex items-center justify-center">
                   3
                 </span>
               </Button>
-              <Button variant="ghost" size="icon" className="relative">
+              <Button variant="ghost" size="icon" className="relative" onClick={onNavigateToSettings}>
                 <Bell className="w-5 h-5" />
                 <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full text-xs flex items-center justify-center">
                   5
                 </span>
               </Button>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" onClick={onNavigateToProfile}>
                 <User className="w-5 h-5" />
               </Button>
             </div>
@@ -257,8 +267,8 @@ export function WorkerDashboard({
                       <span className="px-3 py-1 rounded-full bg-white/5 text-xs font-medium">
                         {gig.status}
                       </span>
-                      <Button variant="ghost" size="sm">
-                        View Details
+                      <Button variant="ghost" size="sm" onClick={onNavigateToEscrow}>
+                        View Escrow
                         <ChevronRight className="w-4 h-4 ml-1" />
                       </Button>
                     </div>
@@ -322,17 +332,26 @@ export function WorkerDashboard({
             <div className="glass rounded-2xl p-6 border border-white/10">
               <h3 className="font-semibold mb-4">Quick Actions</h3>
               <div className="space-y-2">
+                <Button variant="ghost" className="w-full justify-start text-primary" size="sm" onClick={onNavigateToAIMatchmaker}>
+                  <Zap className="w-4 h-4 mr-2" />
+                  AI Gig Matchmaker
+                </Button>
+                <Button variant="ghost" className="w-full justify-start text-green-400" size="sm" onClick={onNavigateToEscrow}>
+                  <Shield className="w-4 h-4 mr-2" />
+                  Contract & Escrow Vault
+                </Button>
+                <div className="h-px bg-white/10 my-2" />
                 <Button variant="ghost" className="w-full justify-start" size="sm">
                   <Plus className="w-4 h-4 mr-2" />
                   Create Service Listing
                 </Button>
-                <Button variant="ghost" className="w-full justify-start" size="sm">
+                <Button variant="ghost" className="w-full justify-start" size="sm" onClick={onNavigateToMessaging}>
                   <MessageSquare className="w-4 h-4 mr-2" />
                   Message Client
                 </Button>
-                <Button variant="ghost" className="w-full justify-start" size="sm">
+                <Button variant="ghost" className="w-full justify-start" size="sm" onClick={onNavigateToSettings}>
                   <TrendingUp className="w-4 h-4 mr-2" />
-                  View Analytics
+                  View Analytics & Settings
                 </Button>
               </div>
             </div>
